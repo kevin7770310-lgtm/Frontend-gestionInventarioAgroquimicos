@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,106 +9,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
-        :root {
-            --sidebar-color: #0d1a0d;
-            --accent-color: #34d399;
-            --bg-body: #f1f5f9;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-body);
-            display: flex;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        .sidebar {
-            width: 260px;
-            background-color: var(--sidebar-color);
-            color: white;
-            position: fixed;
-            height: 100vh;
-            padding: 2rem;
-            z-index: 100;
-        }
-
-        .main-panel {
-            margin-left: 260px;
-            flex: 1;
-            padding: 3rem;
-        }
-
-        .brand {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--accent-color);
-            margin-bottom: 2rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 1rem;
-        }
-
-        .search-group {
-            display: flex;
-            gap: 10px;
-            background: white;
-            padding: 8px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e2e8f0;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .search-input {
-            border: none;
-            outline: none;
-            flex: 1;
-            padding-left: 10px;
-            font-weight: 500;
-        }
-
-        .inventory-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-            border: 1px solid #e2e8f0;
-        }
-
-        .table-custom thead th {
-            background: #f8fafc;
-            padding: 1rem;
-            font-size: 0.65rem;
-            color: #64748b;
-            text-transform: uppercase;
-        }
-
-        .prod-thumb {
-            width: 45px;
-            height: 45px;
-            border-radius: 8px;
-            object-fit: cover;
-            background: #eee;
-        }
-
-        .stock-badge {
-            background: #064e3b;
-            color: var(--accent-color);
-            padding: 5px 12px;
-            border-radius: 6px;
-            font-family: monospace;
-            font-weight: 700;
-        }
-
-        .destacado-card {
-            background: #fff;
-            border-left: 4px solid #ef4444;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            min-width: 220px;
-        }
+        :root { --sidebar-color: #0d1a0d; --accent-color: #34d399; --bg-body: #f1f5f9; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-body); display: flex; min-height: 100vh; margin: 0; }
+        .sidebar { width: 260px; background-color: var(--sidebar-color); color: white; position: fixed; height: 100vh; padding: 2rem; z-index: 100; }
+        .main-panel { margin-left: 260px; flex: 1; padding: 3rem; }
+        .brand { font-size: 1.4rem; font-weight: 800; color: var(--accent-color); margin-bottom: 2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 1rem; }
+        .search-group { display: flex; gap: 10px; background: white; padding: 8px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0; width: 100%; max-width: 500px; }
+        .search-input { border: none; outline: none; flex: 1; padding-left: 10px; font-weight: 500; }
+        .inventory-card { background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); overflow: hidden; border: 1px solid #e2e8f0; }
+        .table-custom thead th { background: #f8fafc; padding: 1rem; font-size: 0.65rem; color: #64748b; text-transform: uppercase; }
+        .prod-thumb { width: 45px; height: 45px; border-radius: 8px; object-fit: cover; background: #eee; }
+        .stock-badge { background: #064e3b; color: var(--accent-color); padding: 5px 12px; border-radius: 6px; font-family: monospace; font-weight: 700; }
+        .destacado-card { background: #fff; border-left: 4px solid #ef4444; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); min-width: 220px; }
     </style>
 </head>
 
@@ -118,8 +29,7 @@
         <div class="brand">GEOSTOCK</div>
         <nav>
             <a href="#" class="nav-link text-white bg-dark p-3 rounded shadow-sm mb-2">Inventario</a>
-            <a href="#" class="nav-link text-white-50 p-3"
-                onclick="alert('Pestaña de Reportes en construcción...')">Historial</a>
+            <a href="#" class="nav-link text-white-50 p-3" onclick="alert('El historial se registra en la base de datos. Pestaña de reportes visuales próximamente.')">Historial</a>
         </nav>
     </aside>
 
@@ -128,19 +38,17 @@
         <div id="destacados" class="d-flex gap-3 mb-4 flex-wrap"></div>
 
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="fw-bold m-0">Panel de Control</h2>
-            <button class="btn btn-dark fw-bold px-4 py-3" style="border-radius: 12px;" onclick="abrirModalNuevo()">+
-                REGISTRAR</button>
+            <h2 class="fw-bold m-0">Control de Productos</h2>
+            <button class="btn btn-dark fw-bold px-4 py-3" style="border-radius: 12px;" onclick="abrirModalNuevo()">+ REGISTRAR</button>
         </div>
 
         <div class="search-group mb-4">
-            <input type="text" id="q" class="search-input" placeholder="Escribe para buscar..." oninput="buscar()">
+            <input type="text" id="q" class="search-input" placeholder="Escribe para buscar al instante..." oninput="buscar()">
         </div>
 
         <div class="d-flex gap-2 mb-4 overflow-auto pb-2">
             <button class="btn btn-sm btn-outline-secondary px-3" onclick="filtrarCat('')">Todos</button>
-            <button class="btn btn-sm btn-outline-dark px-3"
-                onclick="filtrarCat('Fertilizantes')">Fertilizantes</button>
+            <button class="btn btn-sm btn-outline-dark px-3" onclick="filtrarCat('Fertilizantes')">Fertilizantes</button>
             <button class="btn btn-sm btn-outline-dark px-3" onclick="filtrarCat('Insecticidas')">Insecticidas</button>
             <button class="btn btn-sm btn-outline-dark px-3" onclick="filtrarCat('Herbicidas')">Herbicidas</button>
         </div>
@@ -169,33 +77,26 @@
                     <h4 class="fw-bold mb-4" id="modalTitulo">Nuevo Producto</h4>
                     <form id="formGlobal">
                         <input type="hidden" id="editID">
-                        <input type="text" id="nombre" class="form-control mb-3 p-3 bg-light border-0"
-                            placeholder="Nombre" required>
-                        <select id="categoria" class="form-select mb-3 p-3 bg-light border-0"
-                            title="Selecciona Categoría">
+                        <input type="text" id="nombre" class="form-control mb-3 p-3 bg-light border-0" placeholder="Nombre" required>
+                        <select id="categoria" class="form-select mb-3 p-3 bg-light border-0" title="Selecciona Categoría">
                             <option>Fertilizantes</option>
                             <option>Insecticidas</option>
                             <option>Herbicidas</option>
                         </select>
-                        <input type="number" id="cantidad" class="form-control mb-3 p-3 bg-light border-0"
-                            placeholder="Stock" required>
-
+                        <input type="number" id="cantidad" class="form-control mb-3 p-3 bg-light border-0" placeholder="Stock Inicial" required>
+                        
                         <div class="mb-3">
                             <div class="d-flex gap-2">
-                                <input type="text" id="foto_url" class="form-control p-3 bg-light border-0"
-                                    placeholder="URL Imagen">
-                                <label class="btn btn-outline-dark d-flex align-items-center px-3"
-                                    style="cursor:pointer; border-radius: 10px; border: 1px solid #ddd;">
+                                <input type="text" id="foto_url" class="form-control p-3 bg-light border-0" placeholder="URL Imagen">
+                                <label class="btn btn-outline-dark d-flex align-items-center px-3" style="cursor:pointer; border-radius: 10px;">
                                     📷 <input type="file" id="file_input" hidden accept="image/*">
                                 </label>
                             </div>
                             <small id="upload_status" class="fw-bold mt-1 d-block" style="display:none;"></small>
                         </div>
 
-                        <textarea id="descripcion" class="form-control mb-4 p-3 bg-light border-0"
-                            placeholder="Descripción"></textarea>
-                        <button type="submit" class="btn btn-dark w-100 p-3 fw-bold rounded-3"
-                            id="btnGuardar">GUARDAR</button>
+                        <textarea id="descripcion" class="form-control mb-4 p-3 bg-light border-0" placeholder="Descripción"></textarea>
+                        <button type="submit" class="btn btn-dark w-100 p-3 fw-bold rounded-3" id="btnGuardar">GUARDAR</button>
                     </form>
                 </div>
             </div>
@@ -204,25 +105,25 @@
 
     <script>
         const API = 'https://back-gestioninventarioagroquimicos-production.up.railway.app/api/productos';
-        const CLOUD_NAME = 'TU_CLOUD_NAME'; // <--- CAMBIA ESTO
-        const UPLOAD_PRESET = 'geostock_fotos'; // <--- TU PRESET
+        const CLOUD_NAME = 'TU_CLOUD_NAME'; // <--- REEMPLAZA CON TU CLOUD NAME REAL
+        const UPLOAD_PRESET = 'geostock_fotos'; 
         let cacheProductos = [];
 
-        // CARGA INICIAL
+        // CARGAR DATOS AL INICIO
         async function cargarDatos() {
             try {
                 const res = await fetch(`${API}/buscar?q=`);
                 cacheProductos = await res.json();
                 renderizarTabla(cacheProductos);
                 actualizarDestacados(cacheProductos);
-            } catch (err) { console.error("Error cargando Neon:", err); }
+            } catch (err) { console.error("Error cargando inventario:", err); }
         }
 
-        // RENDERIZADO DE TABLA
+        // RENDERIZAR TABLA
         function renderizarTabla(data) {
             const tbody = document.getElementById('tbody');
             if (data.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="6" class="text-center p-5 text-muted">No se encontraron coincidencias</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="6" class="text-center p-5 text-muted">No se encontraron productos.</td></tr>`;
                 return;
             }
             tbody.innerHTML = data.map(p => `
@@ -248,13 +149,19 @@
             `).join('');
         }
 
-        // BÚSQUEDA REACTIVA E INTELIGENTE
+        // BÚSQUEDA AUTOMÁTICA (REACTIVA)
         function buscar() {
             const q = document.getElementById('q').value.toLowerCase().trim();
+            
+            // Si no hay texto, mostramos todo lo cargado en memoria
+            if (q === "") {
+                renderizarTabla(cacheProductos);
+                return;
+            }
 
-            // Filtro flexible: busca por nombre, descripción o categoría
-            const filtrados = cacheProductos.filter(p =>
-                p.nombre.toLowerCase().includes(q) ||
+            // Filtro flexible por nombre, categoría o descripción
+            const filtrados = cacheProductos.filter(p => 
+                p.nombre.toLowerCase().includes(q) || 
                 p.categoria.toLowerCase().includes(q) ||
                 (p.descripcion && p.descripcion.toLowerCase().includes(q))
             );
@@ -262,31 +169,32 @@
             renderizarTabla(filtrados);
         }
 
-        // DESTACADOS (STOCK BAJO)
+        // ACTUALIZAR PRODUCTOS DESTACADOS (STOCK BAJO)
         function actualizarDestacados(data) {
             const div = document.getElementById('destacados');
-            const bajos = data.filter(p => p.cantidad < 10).sort((a, b) => a.cantidad - b.cantidad).slice(0, 3);
-
+            const bajos = data.filter(p => p.cantidad < 10).sort((a,b) => a.cantidad - b.cantidad).slice(0, 3);
+            
             if (bajos.length === 0) {
-                div.innerHTML = `<p class="text-muted small">✅ Todo el stock está en niveles seguros.</p>`;
+                div.innerHTML = `<p class="text-muted small">✅ Todo el stock está en niveles óptimos.</p>`;
                 return;
             }
-
+            
             div.innerHTML = bajos.map(p => `
                 <div class="destacado-card">
-                    <div class="small fw-bold text-danger">RIESGO DE AGOTAMIENTO</div>
+                    <div class="small fw-bold text-danger">⚠️ STOCK CRÍTICO</div>
                     <div class="fw-bold text-dark">${p.nombre}</div>
-                    <div class="h4 m-0 fw-bold">${p.cantidad} <span class="small text-muted" style="font-size: 0.7rem">unidades</span></div>
+                    <div class="h4 m-0 fw-bold">${p.cantidad} <span class="small text-muted" style="font-size: 0.7rem">uds</span></div>
                 </div>
             `).join('');
         }
 
+        // FILTRO POR CATEGORÍA
         function filtrarCat(cat) {
             document.getElementById('q').value = cat;
             buscar();
         }
 
-        // SUBIDA A CLOUDINARY
+        // SUBIDA DE IMAGEN A CLOUDINARY
         document.getElementById('file_input').addEventListener('change', async (e) => {
             const file = e.target.files[0];
             if (!file) return;
@@ -300,27 +208,27 @@
             try {
                 const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`, { method: 'POST', body: formData });
                 const data = await res.json();
-                if (data.secure_url) {
+                if(data.secure_url) {
                     document.getElementById('foto_url').value = data.secure_url;
                     status.innerText = '¡Imagen lista! ✅'; status.style.color = '#10b981';
                 }
-            } catch (err) { status.innerText = 'Error en subida ❌'; status.style.color = '#ef4444'; }
+            } catch (err) { status.innerText = 'Error al subir ❌'; status.style.color = '#ef4444'; }
         });
 
-        // CRUD
+        // FUNCIONES CRUD
         async function adj(id, cambio) {
-            await fetch(`${API}/${id}/stock`, {
-                method: 'PATCH',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ cambio })
+            await fetch(`${API}/${id}/stock`, { 
+                method: 'PATCH', 
+                headers: { 'Content-Type': 'application/json' }, 
+                body: JSON.stringify({ cambio }) 
             });
             cargarDatos();
         }
 
         async function eliminar(id) {
-            if (confirm('¿Eliminar producto definitivamente?')) {
-                await fetch(`${API}/${id}`, { method: 'DELETE' });
-                cargarDatos();
+            if (confirm('¿Eliminar producto?')) { 
+                await fetch(`${API}/${id}`, { method: 'DELETE' }); 
+                cargarDatos(); 
             }
         }
 
@@ -328,7 +236,7 @@
             document.getElementById('formGlobal').reset();
             document.getElementById('editID').value = '';
             document.getElementById('upload_status').style.display = 'none';
-            document.getElementById('modalTitulo').innerText = "Registrar Producto";
+            document.getElementById('modalTitulo').innerText = "Nuevo Producto";
             new bootstrap.Modal(document.getElementById('modalProducto')).show();
         }
 
@@ -353,10 +261,10 @@
                 foto_url: document.getElementById('foto_url').value,
                 descripcion: document.getElementById('descripcion').value
             };
-            await fetch(id ? `${API}/${id}` : API, {
-                method: id ? 'PUT' : 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
+            await fetch(id ? `${API}/${id}` : API, { 
+                method: id ? 'PUT' : 'POST', 
+                headers: { 'Content-Type': 'application/json' }, 
+                body: JSON.stringify(data) 
             });
             bootstrap.Modal.getInstance(document.getElementById('modalProducto')).hide();
             cargarDatos();
@@ -365,5 +273,4 @@
         window.onload = cargarDatos;
     </script>
 </body>
-
 </html>
